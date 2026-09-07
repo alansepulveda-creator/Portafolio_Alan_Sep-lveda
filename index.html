@@ -6,6 +6,12 @@
     <meta name="author" content="Alan Sepúlveda">
     <meta name="description" content="Portafolio personal de Alan Sepúlveda">
     <title>Portafolio | Alan Sepúlveda</title>
+
+    <!-- Fuentes estilizadas desde Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="static/css/style.css">
 </head>
 
@@ -13,12 +19,13 @@
     <header>
         <nav class="nav">
             <div class="logo">
-                <img src="" alt="Logo">
-                <h1>Alan Sepúlveda</h1>
+                <!-- Se puede omitir o reemplazar si no usas imagen para el logo -->
+                <img src="" alt="Logo" class="logo-img">
+                <h1 class="neon-cyan">Alan Sepúlveda</h1>
             </div>
             <div class="menu">
                 <a href="#sobre-mi">Sobre mí</a>
-                <a href="#proyectos">Proyecto</a>
+                <a href="#proyectos">Proyectos</a>
                 <a href="#habilidades">Habilidades</a>
                 <a href="#cursos">Cursos</a>
                 <a href="#contacto">Contacto</a>
@@ -26,9 +33,10 @@
         </nav>
     </header>
 
-    <main>
-        <section id="descripcion">
-            <h2>Hola, soy Alan Sepúlveda</h2>
+    <main class="main-content">
+        <!-- Hero / Presentación -->
+        <section id="descripcion" class="hero-section">
+            <h2>Hola, soy <span class="neon-red">Alan Sepúlveda</span></h2>
             <p>
                 Desarrollador en formación apasionado por la tecnología,
                 la creación de soluciones digitales y el aprendizaje constante.
@@ -36,8 +44,9 @@
             <a href="#proyectos" class="btn">Ver proyectos</a>
         </section>
 
-        <section id="sobre-mi">
-            <h2>Sobre mí</h2>
+        <!-- Sobre mí -->
+        <section id="sobre-mi" class="section-container">
+            <h2>SOBRE <span class="neon-red">MÍ</span></h2>
             <p>
                 Soy una persona interesada en el desarrollo de software,
                 con enfoque en mejorar mis habilidades técnicas y crear
@@ -49,54 +58,61 @@
             </p>
         </section>
 
-        <section id="proyectos">
-            <h2>Proyecto</h2>
-            <article>
-                <h3>Proyecto</h3>
-                <img src="static/images/jobxp.png" alt="jobxp">
+        <!-- Proyectos -->
+        <section id="proyectos" class="section-container">
+            <h2>MIS <span class="neon-cyan">PROYECTOS</span></h2>
+            <article class="card pixel-border">
+                <h3>JOBXP</h3>
+                <div class="card-image-wrapper">
+                    <img src="static/images/jobxp.png" alt="jobxp">
+                </div>
                 <p>
-                    una aplicación web para buscar microtrabajos publicados por empresas 
-                    para ganar experiencia laboral y ganar dinero,
-                    las tecnologías utilizadas fueron: HTML, CSS y JavaScript,
-                    el objetivo de esta aplicación web 
-                    es ayudar con el problema de la falta de experiencia laboral
-                    con los jovenes que salen al mercado laboral
+                    Una aplicación web para buscar microtrabajos publicados por empresas 
+                    para ganar experiencia laboral y ganar dinero. Las tecnologías utilizadas fueron: HTML, CSS y JavaScript.
+                    El objetivo de esta aplicación web es ayudar con el problema de la falta de experiencia laboral
+                    en los jóvenes que salen al mercado laboral.
                 </p>
-                <a href="https://estefanopobletett.github.io/jobxp/">Ver proyecto</a>
+                <div class="card-action">
+                    <a href="https://estefanopobletett.github.io/jobxp/" target="_blank" rel="noopener noreferrer" class="btn">Ver proyecto</a>
+                </div>
             </article>
         </section>
 
-        <section id="habilidades">
-            <h2>Habilidades</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>GitHub</li>
-                <li>Resolución de problemas</li>
+        <!-- Habilidades -->
+        <section id="habilidades" class="section-container">
+            <h2>HABILIDADES</h2>
+            <ul class="skills-list">
+                <li class="badge">HTML</li>
+                <li class="badge">CSS</li>
+                <li class="badge">JavaScript</li>
+                <li class="badge">GitHub</li>
+                <li class="badge">Resolución de problemas</li>
             </ul>
         </section>
 
-        <section id="cursos">
-            <h2>Cursos</h2>
-            <ul>
+        <!-- Cursos -->
+        <section id="cursos" class="section-container">
+            <h2>CURSOS</h2>
+            <ul class="courses-list">
                 <li>Curso de desarrollo web</li>
             </ul>
         </section>
 
-        <section id="contacto">
-            <h2>Contacto</h2>
+        <!-- Contacto -->
+        <section id="contacto" class="section-container">
+            <h2>CONTACTO</h2>
             <p>Puedes encontrarme en:</p>
-            <ul>
-                <li>Email: alansepulveda@.com</li>
-                <li>GitHub: <a href="https://github.com/alansepulveda-creator">https://github.com/alansepulveda-creator</a></li>
+            <ul class="contact-list">
+                <li><strong>Email:</strong> alansepulveda@liceovvh.cl</li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/alansepulveda-creator" target="_blank" rel="noopener noreferrer" class="link-neon">https://github.com/alansepulveda-creator</a></li>
             </ul>
         </section>
     </main>
+
     <footer>
         <p>© 2026 Alan Sepúlveda. Todos los derechos reservados.</p>
     </footer>
 
-<script src="static/js/script.js"></script>
+    <script src="static/js/script.js"></script>
 </body>
 </html>
