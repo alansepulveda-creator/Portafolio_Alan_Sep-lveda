@@ -1,5 +1,5 @@
 /* =========================================================
-   1. RESET GENERAL Y FUENTES
+   1. RESET GENERAL Y ESTILOS BASE
    ========================================================= */
 * {
   box-sizing: border-box;
@@ -7,131 +7,131 @@
   padding: 0;
 }
 
-/* =========================================================
-   2. FONDO TEMÁTICO
-   ========================================================= */
 body {
   background-color: #080102;
-  background-image: 
-    /* 1. Resplandor rojo/carmesí al atardecer */
-    radial-gradient(
-      circle at 50% 40%, 
-      rgba(217, 4, 41, 0.8) 0%, 
-      rgba(139, 0, 0, 0.55) 28%, 
-      rgba(31, 5, 8, 0.92) 60%, 
-      #080102 100%
-    ),
-    /* 2. Reflejo sobre la línea del horizonte del agua */
-    linear-gradient(
-      to bottom, 
-      transparent 44%, 
-      rgba(255, 60, 60, 0.45) 45%, 
-      transparent 46%
-    );
-  background-attachment: fixed;
   color: #f1faee;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 1.15rem;
   line-height: 1.6;
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
 /* =========================================================
-   3. NAVEGACIÓN
+   2. NAVEGACIÓN
    ========================================================= */
-nav.nav {
+nav.navegacion {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
   padding: 1rem 2rem;
-  background: rgba(8, 1, 2, 0.95);
+  background: #0c0305;
   border-bottom: 2px solid #d90429;
-  position: relative;
-  top: 0;
-  z-index: 1000;
 }
 
-.logo {
+.logotipo h1 {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.controles-navegacion {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.menu {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-}
-
-.logo img.logo-img {
-  max-height: 35px;
-  width: 0;
-  height: 0;
-  opacity: 0;
-}
-
-.logo h1 {
-  font-family: 'Courier New', monospace;
-  font-size: 0.9rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .menu a {
   color: #f1faee;
   text-decoration: none;
-  font-family: 'Courier New', monospace;
-  font-size: 0.65rem;
-  margin-left: 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
   transition: color 0.2s ease;
+  text-transform: uppercase;
 }
 
 .menu a:hover {
   color: #00f5d4;
 }
 
+.boton-menu,
+.boton-idioma {
+  background: #080102;
+  color: #00f5d4;
+  border: 1px solid #00f5d4;
+  padding: 5px 12px;
+  font-family: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.boton-idioma {
+  color: #d4af37;
+  border-color: #d4af37;
+}
+
 /* =========================================================
-   4. ESTRUCTURA Y SECCIONES TRASLÚCIDAS
+   3. ESTRUCTURA Y SECCIONES
    ========================================================= */
-.main-content {
+.contenido-principal {
   max-width: 950px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
 
-.section-container {
+.seccion-contenedor {
   margin: 3rem 0;
   padding: 2.5rem;
-  background: rgba(12, 3, 5, 0.92);
+  background: #0c0305;
   border: 1px solid rgba(217, 4, 41, 0.4);
   border-radius: 8px;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
 }
 
-/* Hero / Descripcion */
-.hero-section {
+.seccion-principal {
   text-align: center;
   padding: 4rem 1.5rem 3rem 1.5rem;
   margin-bottom: 2rem;
 }
 
-.hero-section h2 {
-  font-family: 'Courier New', monospace;
-  font-size: 1.6rem;
+.seccion-principal h2 {
+  font-size: 2rem;
   margin-bottom: 1rem;
+  font-weight: 700;
 }
 
-.hero-section p {
+.seccion-principal p {
   color: #a8a2a6;
   max-width: 650px;
   margin: 0 auto 2rem auto;
   font-size: 1.25rem;
 }
 
-/* Encabezados generales */
+.botones-bienvenida {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 h2 {
-  font-family: 'Courier New', monospace;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 h3 {
-  font-family: 'Courier New', monospace;
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 p {
@@ -140,88 +140,98 @@ p {
 }
 
 /* =========================================================
-   5. TARJETA DE PROYECTOS
+   4. TARJETAS DE PROYECTOS
    ========================================================= */
-.card {
-  background: rgba(8, 1, 2, 0.9);
+.tarjeta {
+  background: #080102;
   padding: 2rem;
   border-radius: 6px;
   margin-top: 1.5rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.pixel-border {
+.borde-pixel {
   border: 3px solid #d4af37;
-  box-shadow: 
+  box-shadow:
     0 0 0 3px #080102,
     0 0 18px rgba(212, 175, 55, 0.35);
 }
 
-.card:hover {
+.tarjeta:hover {
   transform: translateY(-4px);
-  box-shadow: 
+  box-shadow:
     0 0 0 3px #080102,
     0 0 25px rgba(217, 4, 41, 0.6);
 }
 
-.card-image-wrapper {
+.contenedor-imagen-tarjeta {
   margin: 1.5rem 0;
-  overflow: hidden;
   border: 1px solid rgba(217, 4, 41, 0.5);
   border-radius: 4px;
 }
 
-.card-image-wrapper img {
+.contenedor-imagen-tarjeta img {
   width: 100%;
   height: auto;
   display: block;
-  transition: transform 0.3s ease;
 }
 
-.card:hover .card-image-wrapper img {
-  transform: scale(1.02);
+.etiquetas-tecnologia {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
 }
 
-.card-action {
+.etiqueta-tec {
+  background: #d90429;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.acciones-tarjeta {
+  display: flex;
+  gap: 1rem;
   margin-top: 1.5rem;
+  flex-wrap: wrap;
 }
 
 /* =========================================================
-   6. HABILIDADES, CURSOS Y CONTACTO
+   5. HABILIDADES Y CONTACTO
    ========================================================= */
-.skills-list {
+.contenedor-habilidades {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
 }
 
-.skills-list, .courses-list, .contact-list {
-  list-style-type: none;
-}
-
-.skills-list .badge {
-  font-family: 'Courier New', monospace;
-  font-size: 0.65rem;
-  padding: 10px 16px;
-  background: rgba(8, 1, 2, 0.9);
+.contenedor-habilidades .insignia {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 14px;
+  background: #080102;
   border: 2px solid #d4af37;
   color: #f1faee;
   box-shadow: 2px 2px 0px #000;
+  text-transform: uppercase;
 }
 
-.courses-list li, .contact-list li {
-  padding: 0.5rem 0;
+.caja-contacto p {
+  padding: 0.6rem 0;
   border-bottom: 1px dashed rgba(217, 4, 41, 0.3);
 }
 
 /* =========================================================
-   7. BOTONES Y DETALLES NEÓN
+   6. BOTONES Y DETALLES NEÓN
    ========================================================= */
-.btn {
+.boton {
   display: inline-block;
-  font-family: 'Courier New', monospace;
-  font-size: 0.7rem;
-  padding: 12px 22px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  padding: 10px 20px;
   color: #000;
   background-color: #d4af37;
   border: 2px solid #fff;
@@ -229,68 +239,48 @@ p {
   text-decoration: none;
   transition: all 0.2s ease;
   box-shadow: 3px 3px 0px #000;
+  text-transform: uppercase;
 }
 
-.btn:hover {
+.boton-secundario {
+  background-color: transparent;
+  color: #00f5d4;
+  border-color: #00f5d4;
+}
+
+.boton:hover {
   background-color: #00f5d4;
+  color: #000;
   transform: translate(2px, 2px);
   box-shadow: 1px 1px 0px #000;
 }
 
-.neon-cyan {
+.neon-cian {
   color: #00f5d4;
   text-shadow: 0 0 8px #00f5d4;
 }
 
-.neon-red {
+.neon-rojo {
   color: #d90429;
   text-shadow: 0 0 8px #d90429;
 }
 
-.link-neon {
+.enlace-neon {
   color: #00f5d4;
   text-decoration: none;
 }
 
-.link-neon:hover {
+.enlace-neon:hover {
   text-decoration: underline;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 2rem 1rem;
-  font-family: 'Courier New', monospace;
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   color: #a8a2a6;
   border-top: 1px solid rgba(217, 4, 41, 0.3);
   margin-top: 4rem;
-  background: rgba(8, 1, 2, 0.9);
-}
-
-/* =========================================================
-   EFECTO DE OCÉANO ROJO Y REFLEJO DE AGUA RETRO (ESTÁTICO)
-   ========================================================= */
-body::after {
-  content: "";
-  position: fixed;
-  top: 44%;
-  left: 0;
-  width: 100%;
-  height: 56%;
-  z-index: -1;
-  pointer-events: none;
-  
-  background: 
-    radial-gradient(
-      ellipse at 50% 0%, 
-      rgba(217, 4, 41, 0.5) 0%, 
-      rgba(139, 0, 0, 0.2) 40%, 
-      transparent 75%
-    ),
-    linear-gradient(
-      to bottom,
-      rgba(10, 3, 4, 0.9),
-      rgba(139, 0, 0, 0.3)
-    );
+  background: #080102;
+  text-transform: uppercase;
 }
